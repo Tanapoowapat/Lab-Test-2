@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.10.8 on win32)" generated="20231012 01:11:56.157" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Robot" source="D:\work\SPSS\Lab_test\Lab-Test-2\robotframework\test_robot.robot">
+<test id="s1-t1" name="Test HelloWorld" line="26">
+<kw name="Get HelloWorld">
+<var>${response}</var>
+<kw name="Get" library="requests">
+<var>${response}</var>
+<arg>http://127.0.0.1:5001/</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20231012 01:11:56.291" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231012 01:11:56.284" endtime="20231012 01:11:56.291"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>${200}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231012 01:11:56.291" endtime="20231012 01:11:56.292"/>
+</kw>
+<msg timestamp="20231012 01:11:56.293" level="INFO">${response} = Hello, World!</msg>
+<status status="PASS" starttime="20231012 01:11:56.284" endtime="20231012 01:11:56.293"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>Hello, World!</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20231012 01:11:56.293" level="INFO">Argument types are:
+&lt;class 'bytes'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231012 01:11:56.293" endtime="20231012 01:11:56.293"/>
+</kw>
+<status status="PASS" starttime="20231012 01:11:56.283" endtime="20231012 01:11:56.294"/>
+</test>
+<test id="s1-t2" name="Test Is_prime_1" line="30">
+<kw name="Get Is_prime">
+<var>${response}</var>
+<arg>${17}</arg>
+<kw name="Get" library="requests">
+<var>${response}</var>
+<arg>http://127.0.0.1:5001/is_prime/${number}</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20231012 01:11:56.300" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231012 01:11:56.295" endtime="20231012 01:11:56.300"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>${200}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231012 01:11:56.300" endtime="20231012 01:11:56.301"/>
+</kw>
+<msg timestamp="20231012 01:11:56.301" level="INFO">${response} = True</msg>
+<status status="PASS" starttime="20231012 01:11:56.294" endtime="20231012 01:11:56.301"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>True</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20231012 01:11:56.302" level="INFO">Argument types are:
+&lt;class 'bytes'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231012 01:11:56.302" endtime="20231012 01:11:56.302"/>
+</kw>
+<status status="PASS" starttime="20231012 01:11:56.294" endtime="20231012 01:11:56.302"/>
+</test>
+<test id="s1-t3" name="Test Is_prime_equal_36" line="34">
+<kw name="Get Is_prime">
+<var>${response}</var>
+<arg>${36}</arg>
+<kw name="Get" library="requests">
+<var>${response}</var>
+<arg>http://127.0.0.1:5001/is_prime/${number}</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20231012 01:11:56.309" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231012 01:11:56.304" endtime="20231012 01:11:56.309"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>${200}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231012 01:11:56.310" endtime="20231012 01:11:56.311"/>
+</kw>
+<msg timestamp="20231012 01:11:56.311" level="INFO">${response} = False</msg>
+<status status="PASS" starttime="20231012 01:11:56.303" endtime="20231012 01:11:56.311"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>False</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20231012 01:11:56.312" level="INFO">Argument types are:
+&lt;class 'bytes'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231012 01:11:56.311" endtime="20231012 01:11:56.312"/>
+</kw>
+<status status="PASS" starttime="20231012 01:11:56.302" endtime="20231012 01:11:56.312"/>
+</test>
+<test id="s1-t4" name="Test Is_prime_equal_13219" line="39">
+<kw name="Get Is_prime">
+<var>${response}</var>
+<arg>${13219}</arg>
+<kw name="Get" library="requests">
+<var>${response}</var>
+<arg>http://127.0.0.1:5001/is_prime/${number}</arg>
+<doc>Sends a GET request.</doc>
+<msg timestamp="20231012 01:11:56.320" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20231012 01:11:56.313" endtime="20231012 01:11:56.320"/>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${response.status_code}</arg>
+<arg>${200}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20231012 01:11:56.321" endtime="20231012 01:11:56.322"/>
+</kw>
+<msg timestamp="20231012 01:11:56.322" level="INFO">${response} = True</msg>
+<status status="PASS" starttime="20231012 01:11:56.313" endtime="20231012 01:11:56.322"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${response}</arg>
+<arg>True</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<msg timestamp="20231012 01:11:56.323" level="INFO">Argument types are:
+&lt;class 'bytes'&gt;
+&lt;class 'str'&gt;</msg>
+<status status="PASS" starttime="20231012 01:11:56.322" endtime="20231012 01:11:56.323"/>
+</kw>
+<status status="PASS" starttime="20231012 01:11:56.313" endtime="20231012 01:11:56.323"/>
+</test>
+<status status="PASS" starttime="20231012 01:11:56.160" endtime="20231012 01:11:56.324"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Test Robot">Test Robot</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
